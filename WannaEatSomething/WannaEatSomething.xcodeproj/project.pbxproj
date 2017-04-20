@@ -15,6 +15,7 @@
 		A93156B11EA6433B0087CBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93156AF1EA6433B0087CBD3 /* LaunchScreen.storyboard */; };
 		A93156BC1EA6433B0087CBD3 /* WannaEatSomethingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156BB1EA6433B0087CBD3 /* WannaEatSomethingTests.swift */; };
 		A93156C71EA6433B0087CBD3 /* WannaEatSomethingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */; };
+		A949E0981EA8FC4A007AE63A /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949E0971EA8FC4A007AE63A /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A93156C21EA6433B0087CBD3 /* WannaEatSomethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaEatSomethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaEatSomethingUITests.swift; sourceTree = "<group>"; };
 		A93156C81EA6433B0087CBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A949E0971EA8FC4A007AE63A /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondVC.swift; path = ../SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		A93156A21EA6433B0087CBD3 /* WannaEatSomething */ = {
 			isa = PBXGroup;
 			children = (
+				A949E0971EA8FC4A007AE63A /* SecondVC.swift */,
 				A93156A31EA6433B0087CBD3 /* AppDelegate.swift */,
 				A93156A51EA6433B0087CBD3 /* ViewController.swift */,
 				A93156A71EA6433B0087CBD3 /* Main.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				A93156AC1EA6433B0087CBD3 /* WannaEatSomething.xcdatamodeld in Sources */,
 				A93156A61EA6433B0087CBD3 /* ViewController.swift in Sources */,
+				A949E0981EA8FC4A007AE63A /* SecondVC.swift in Sources */,
 				A93156A41EA6433B0087CBD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +524,7 @@
 				A93156CD1EA6433B0087CBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93156CE1EA6433B0087CBD3 /* Build configuration list for PBXNativeTarget "WannaEatSomethingTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				A93156D01EA6433B0087CBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A93156D11EA6433B0087CBD3 /* Build configuration list for PBXNativeTarget "WannaEatSomethingUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				A93156D31EA6433B0087CBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
