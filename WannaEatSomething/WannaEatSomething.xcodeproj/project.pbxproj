@@ -17,7 +17,6 @@
 		A93156B11EA6433B0087CBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93156AF1EA6433B0087CBD3 /* LaunchScreen.storyboard */; };
 		A93156BC1EA6433B0087CBD3 /* WannaEatSomethingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156BB1EA6433B0087CBD3 /* WannaEatSomethingTests.swift */; };
 		A93156C71EA6433B0087CBD3 /* WannaEatSomethingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */; };
-		A949E0981EA8FC4A007AE63A /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A949E0971EA8FC4A007AE63A /* SecondVC.swift */; };
 		D9D368BDCA45E0795AED344E /* Pods_WannaEatSomethingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD99AF93981CB564877DE2CE /* Pods_WannaEatSomethingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		A93156C21EA6433B0087CBD3 /* WannaEatSomethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaEatSomethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaEatSomethingUITests.swift; sourceTree = "<group>"; };
 		A93156C81EA6433B0087CBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A949E0971EA8FC4A007AE63A /* SecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondVC.swift; path = ../SecondVC.swift; sourceTree = "<group>"; };
 		CD99AF93981CB564877DE2CE /* Pods_WannaEatSomethingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaEatSomethingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15E78A8C9C2FA2E8B2B14F9 /* Pods-WannaEatSomething.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEatSomething.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEatSomething/Pods-WannaEatSomething.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 		A93156A21EA6433B0087CBD3 /* WannaEatSomething */ = {
 			isa = PBXGroup;
 			children = (
-				A949E0971EA8FC4A007AE63A /* SecondVC.swift */,
 				A93156A31EA6433B0087CBD3 /* AppDelegate.swift */,
 				A93156A51EA6433B0087CBD3 /* ViewController.swift */,
 				A93156A71EA6433B0087CBD3 /* Main.storyboard */,
@@ -457,7 +454,6 @@
 			files = (
 				A93156AC1EA6433B0087CBD3 /* WannaEatSomething.xcdatamodeld in Sources */,
 				A93156A61EA6433B0087CBD3 /* ViewController.swift in Sources */,
-				A949E0981EA8FC4A007AE63A /* SecondVC.swift in Sources */,
 				A93156A41EA6433B0087CBD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
