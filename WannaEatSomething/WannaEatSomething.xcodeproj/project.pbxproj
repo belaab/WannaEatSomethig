@@ -17,6 +17,9 @@
 		A93156B11EA6433B0087CBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93156AF1EA6433B0087CBD3 /* LaunchScreen.storyboard */; };
 		A93156BC1EA6433B0087CBD3 /* WannaEatSomethingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156BB1EA6433B0087CBD3 /* WannaEatSomethingTests.swift */; };
 		A93156C71EA6433B0087CBD3 /* WannaEatSomethingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */; };
+		A9DCA60F1EB116460067939E /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DCA60E1EB116460067939E /* TableVC.swift */; };
+		A9DCA6111EB117170067939E /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DCA6101EB117170067939E /* Cell.swift */; };
+		A9DCA6131EB12DD50067939E /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = A9DCA6121EB12DD50067939E /* Phosphate.ttc */; };
 		D9D368BDCA45E0795AED344E /* Pods_WannaEatSomethingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD99AF93981CB564877DE2CE /* Pods_WannaEatSomethingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		A93156C21EA6433B0087CBD3 /* WannaEatSomethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaEatSomethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93156C61EA6433B0087CBD3 /* WannaEatSomethingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaEatSomethingUITests.swift; sourceTree = "<group>"; };
 		A93156C81EA6433B0087CBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9DCA60E1EB116460067939E /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		A9DCA6101EB117170067939E /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		A9DCA6121EB12DD50067939E /* Phosphate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosphate.ttc; sourceTree = "<group>"; };
 		CD99AF93981CB564877DE2CE /* Pods_WannaEatSomethingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaEatSomethingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15E78A8C9C2FA2E8B2B14F9 /* Pods-WannaEatSomething.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEatSomething.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEatSomething/Pods-WannaEatSomething.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,10 +125,13 @@
 				A93156A31EA6433B0087CBD3 /* AppDelegate.swift */,
 				A93156A51EA6433B0087CBD3 /* ViewController.swift */,
 				A93156A71EA6433B0087CBD3 /* Main.storyboard */,
+				A9DCA6121EB12DD50067939E /* Phosphate.ttc */,
+				A9DCA6101EB117170067939E /* Cell.swift */,
 				A93156AD1EA6433B0087CBD3 /* Assets.xcassets */,
 				A93156AF1EA6433B0087CBD3 /* LaunchScreen.storyboard */,
 				A93156B21EA6433B0087CBD3 /* Info.plist */,
 				A93156AA1EA6433B0087CBD3 /* WannaEatSomething.xcdatamodeld */,
+				A9DCA60E1EB116460067939E /* TableVC.swift */,
 			);
 			path = WannaEatSomething;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 			files = (
 				A93156B11EA6433B0087CBD3 /* LaunchScreen.storyboard in Resources */,
 				A93156AE1EA6433B0087CBD3 /* Assets.xcassets in Resources */,
+				A9DCA6131EB12DD50067939E /* Phosphate.ttc in Resources */,
 				A93156A91EA6433B0087CBD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93156AC1EA6433B0087CBD3 /* WannaEatSomething.xcdatamodeld in Sources */,
+				A9DCA60F1EB116460067939E /* TableVC.swift in Sources */,
+				A9DCA6111EB117170067939E /* Cell.swift in Sources */,
 				A93156A61EA6433B0087CBD3 /* ViewController.swift in Sources */,
 				A93156A41EA6433B0087CBD3 /* AppDelegate.swift in Sources */,
 			);
