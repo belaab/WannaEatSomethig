@@ -12,7 +12,7 @@ import Alamofire
 
 class PlacesVC: UITableViewController {
 
-    let url = 
+    let url =
     let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
     let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
     
