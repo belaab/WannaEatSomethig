@@ -10,32 +10,61 @@ import UIKit
 import CoreLocation
 import Alamofire
 
-class PlacesVC: UITableViewController {
+class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let url =
+    /*let SearchUrl = "https://api.foursquare.com/v2/venues/search?client_id=5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4&client_secret=DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3&ll=40.7,-74&query=sushi"
+   
     let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
     let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
-    
-    let manager = CLLocationManager()
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations newLocations: [CLLocation]) {
-        
-        let latestLocation: CLLocation = newLocations.last!
-        var latitude = latestLocation.coordinate.latitude
-        var longitude = latestLocation.coordinate.longitude
-        
-    }
+   
+    typealias JSONStandard = [String: AnyObject]*/
     
     
     
-    func callAlamo(url: String){ //grabs the data from the provided URL
-        Alamofire.request(url).responseJSON(completionHandler: {
-            response in
-            self.parseData(JSONData: response.data!)
-            
-        })
-    }
+//    
+//    func callAlamo(url: String){ //grabs the data from the provided URL
+//        Alamofire.request(url).responseJSON(completionHandler: {
+//            response in
+//            self.parseData(JSONData: response.data!)
+//            
+//        })
+//    }
+//    
+//    
+//    func parseData(JSONData: Data){
+//        do{
+//            var readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
+//                print(readableJSON)
+//        }catch{
+//            print(error)
+//        }
+//    }
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    let manager = CLLocationManager()
+//    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations newLocations: [CLLocation]) {
+//        
+//        let latestLocation: CLLocation = newLocations.last!
+//        var latitude = latestLocation.coordinate.latitude
+//        var longitude = latestLocation.coordinate.longitude
+//        
+//    }
+    
+    
+    
+    
+   
     
     
     
@@ -44,17 +73,21 @@ class PlacesVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        manager.delegate = self as! CLLocationManagerDelegate
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-
+//        
+//        manager.delegate = self as! CLLocationManagerDelegate
+//        manager.desiredAccuracy = kCLLocationAccuracyBest
+//        manager.requestWhenInUseAuthorization()
+//        manager.startUpdatingLocation()
+//        
+//        callAlamo(url: SearchUrl)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        PlacesVC.delegate = self
+        PlacesVC.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,7 +111,7 @@ class PlacesVC: UITableViewController {
         return 90
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
@@ -86,7 +119,7 @@ class PlacesVC: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
