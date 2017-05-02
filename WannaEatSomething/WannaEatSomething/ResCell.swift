@@ -1,18 +1,16 @@
 //
-//  Cell.swift
+//  ResCell.swift
 //  WannaEatSomething
 //
-//  Created by Iza on 26.04.2017.
+//  Created by Iza on 02.05.2017.
 //  Copyright © 2017 IB. All rights reserved.
 //
 
 import UIKit
 
-class Cell: UITableViewCell {
+class ResCell: UITableViewCell {
 
-    @IBOutlet var nameLabel: UILabel!
-    
-    @IBOutlet var background: UIImageView!
+    @IBOutlet var name: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,6 +10,7 @@
 		05FF9294FBD9F327762C5AF4 /* Pods_WannaEatSomething.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DAC6C003213207FDA8EB702 /* Pods_WannaEatSomething.framework */; };
 		41FACF8E49BEC63BAAA1636E /* Pods_WannaEatSomethingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461396F6D940DCF8BD198EB1 /* Pods_WannaEatSomethingUITests.framework */; };
 		A902F1B91EB7331500EE71E0 /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902F1B81EB7331500EE71E0 /* RestaurantVC.swift */; };
+		A91136F71EB8F6DC0020ECE5 /* ResCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91136F61EB8F6DC0020ECE5 /* ResCell.swift */; };
 		A93156A41EA6433B0087CBD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156A31EA6433B0087CBD3 /* AppDelegate.swift */; };
 		A93156A61EA6433B0087CBD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93156A51EA6433B0087CBD3 /* ViewController.swift */; };
 		A93156A91EA6433B0087CBD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93156A71EA6433B0087CBD3 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		7AB76C6272FA2324E0B1EF4B /* Pods-WannaEatSomethingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEatSomethingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEatSomethingUITests/Pods-WannaEatSomethingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B5AB66C3B2B4390387D776B /* Pods-WannaEatSomethingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEatSomethingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEatSomethingTests/Pods-WannaEatSomethingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A902F1B81EB7331500EE71E0 /* RestaurantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
+		A91136F61EB8F6DC0020ECE5 /* ResCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResCell.swift; sourceTree = "<group>"; };
 		A93156A01EA6433B0087CBD3 /* WannaEatSomething.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaEatSomething.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93156A31EA6433B0087CBD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A93156A51EA6433B0087CBD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				A93156B21EA6433B0087CBD3 /* Info.plist */,
 				A93156AA1EA6433B0087CBD3 /* WannaEatSomething.xcdatamodeld */,
 				A9DCA60E1EB116460067939E /* TableVC.swift */,
+				A91136F61EB8F6DC0020ECE5 /* ResCell.swift */,
 			);
 			path = WannaEatSomething;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				A902F1B91EB7331500EE71E0 /* RestaurantVC.swift in Sources */,
 				A93156A61EA6433B0087CBD3 /* ViewController.swift in Sources */,
 				A93156A41EA6433B0087CBD3 /* AppDelegate.swift in Sources */,
+				A91136F71EB8F6DC0020ECE5 /* ResCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

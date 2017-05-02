@@ -10,24 +10,34 @@ import UIKit
 import Alamofire
 import CoreLocation
 
+
+struct info{
+    let name: String!
+    //let location: String!
+}
+
+
 class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var infoArray = [info]()
+    
     let manager = CLLocationManager()
 
     
- let SearchURL = "https://api.foursquare.com/v2/venues/search?ll=52.13,21&client_id=5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4&client_secret=DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3&query=burger&v=20170501"
+    let SearchURL = "https://api.foursquare.com/v2/venues/search?ll=52.13,21&client_id=5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4&client_secret=DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3&query=burger&v=20170501"
     
     
          
-         let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
-         let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
-    
+    let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
+    let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         callAlamo(url: SearchURL)
 //        manager.delegate = self as! CLLocationManagerDelegate
 //        manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -36,9 +46,9 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
 
     
-         typealias JSONStandard = [String: AnyObject]
-        
-    
+        typealias JSONStandard = [String: AnyObject]
+
+
         func callAlamo(url: String){ //grabs the data from the provided URL
             Alamofire.request(url).responseJSON(completionHandler: {
                 response in
@@ -54,18 +64,21 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                         if let venues = response["venues"] as? [JSONStandard] {
                             for i in 0..<venues.count{
                                // print(venues[i])
-                                let item = venues[i] as! JSONStandard
+                                let item = venues[i]
                                 //print(item)
                                 let name = item["name"] as! String
-                               // let previewURL = item["preview_url"] as! String
-                                print(name)
+                               // print(name)
+                                
+                                infoArray.append(info.init(name: name))
+                                DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                                }
                             }
                         }
                         
                     }
                 
                     //print(readableJSON)
-                    print("dupa")
                 }catch{
                     print(error)
                 }
@@ -97,17 +110,19 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         return 1
     }
     
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return infoArray.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResCell", for: indexPath) as! Cell
         
-        //let foodObjects = food[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResCell") as! ResCell
         
-//        cell.background.image = UIImage(named: foodObjects["image"]!)
-//        cell.nameLabel.text  = foodObjects["item"]
+        cell.name.text = infoArray[indexPath.row].name!
+        
+       // cell.name.text = uilabel
         
         return cell
     }
