@@ -20,12 +20,21 @@ struct info{
 class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
+    
+    typealias JSONStandard = [String: AnyObject]
+   
     @IBOutlet var selectedItem: UILabel!
     
+    let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
+    let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
+
+    //var currentLocation:CLLocationCoordinate2D!
     
+    var SearchURL: String! {
+        return "https://api.foursquare.com/v2/venues/search?ll=50.06,19.94&client_id=\(clientID)&client_secret=\(clientSecret)&query=\(chosed!)&v=20170501"
+    }
     
     var chosed : String!
-   // selectedItem.text = chosed
     
     @IBOutlet var tableView: UITableView!
     
@@ -33,31 +42,15 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     let manager = CLLocationManager()
 
-    
-    let SearchURL = "https://api.foursquare.com/v2/venues/search?ll=52.13,21&client_id=5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4&client_secret=DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3&query=burger&v=20170501"
-    
-    
-         
-    let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
-    let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
-    
-   // selectedItem.text = "DUPA"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedItem.text = chosed
         callAlamo(url: SearchURL)
-//        manager.delegate = self as! CLLocationManagerDelegate
-//        manager.desiredAccuracy = kCLLocationAccuracyBest
-//        manager.requestWhenInUseAuthorization()
-//        manager.startUpdatingLocation()
     }
-
     
-        typealias JSONStandard = [String: AnyObject]
 
 
-        func callAlamo(url: String){ //grabs the data from the provided URL
+    func callAlamo(url: String){ //grabs the data from the provided URL
             Alamofire.request(url).responseJSON(completionHandler: {
                 response in
                 self.parseData(JSONData: response.data!)
@@ -105,7 +98,11 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 //            }
 //        
     
-        
+    //        manager.delegate = self as! CLLocationManagerDelegate
+    //        manager.desiredAccuracy = kCLLocationAccuracyBest
+    //        manager.requestWhenInUseAuthorization()
+    //        manager.startUpdatingLocation()
+
     
     
     
