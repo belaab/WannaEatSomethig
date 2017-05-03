@@ -62,6 +62,18 @@ class TableVC: UITableViewController {
         return cell
     }
  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tableView.indexPathForSelectedRow?.row
+        
+        let resVC = segue.destination as! RestaurantVC
+        
+        let selectedItem = food[indexPath!]["item"]
+       
+        print(selectedItem!)
+        
+        resVC.chosed = selectedItem
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

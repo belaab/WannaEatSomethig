@@ -20,6 +20,13 @@ struct info{
 class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
+    @IBOutlet var selectedItem: UILabel!
+    
+    
+    
+    var chosed : String!
+   // selectedItem.text = chosed
+    
     @IBOutlet var tableView: UITableView!
     
     var infoArray = [info]()
@@ -34,10 +41,11 @@ class RestaurantVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     let clientID = "5O53IDZJAWB12DFHH1WFEYL2I1I3L0BTYQPHZUGJZYFL5IO4"
     let clientSecret = "DXVEG1PDN0NMSOOZRRLJTWXTAON4RUL3GJSXAZVVEKHP40A3"
     
-    
+   // selectedItem.text = "DUPA"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedItem.text = chosed
         callAlamo(url: SearchURL)
 //        manager.delegate = self as! CLLocationManagerDelegate
 //        manager.desiredAccuracy = kCLLocationAccuracyBest

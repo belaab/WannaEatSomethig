@@ -310,6 +310,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectedItem" destination="UPW-k1-TNM" id="Nc1-bh-ods"/>
                         <outlet property="tableView" destination="mmx-6y-JSN" id="RLf-Qd-rIN"/>
                     </connections>
                 </viewController>
